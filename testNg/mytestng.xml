@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Loan Department">
+  	<listeners>
+		<listener class-name="testNg.Listeners"/>
+	</listeners>
+	<parameter name="username" value="myloan"/>
+  <test thread-count="5" name="Personal Loan">
+  	<parameter name="username" value="ploan"/>
+    <classes>
+      <class name="testNg.Demo1"/>
+      <class name="testNg.Demo2"/>
+    </classes>
+  </test>
+  <test name="Car Loan">
+  	<classes>
+  		<class name="testNg.Demo3">
+  			<methods>
+  				<include name="web.*"/>
+  			</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="Home Loan">
+  	<classes>
+  		<class name="testNg.Demo4"/>
+  	</classes> 
+  </test>
+</suite> 
